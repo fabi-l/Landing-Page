@@ -1,6 +1,6 @@
 <!-- HTML START -->
  <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,6 +79,7 @@
 </div> <!-- HTML END -->
 <script>
   // Progressive scroll-linked reveal (no external libraries)
+  document.documentElement.classList.add('js-reveal');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const sections = document.querySelectorAll('.femstem-landing .femstem-section');
 
@@ -99,6 +100,11 @@
     const maxOffset = window.innerWidth < 768 ? 32 : 40;
 
     sections.forEach((section) => {
+      if (section.id === 'hero') {
+        section.style.opacity = '1';
+        section.style.transform = 'translateY(0)';
+        return;
+      }
       const rect = section.getBoundingClientRect();
       const rawProgress = (viewportHeight - rect.top) / (viewportHeight + rect.height);
       const clamped = Math.max(0, Math.min(1, rawProgress));
@@ -125,7 +131,11 @@
   updateReveal();
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
-  prefersReducedMotion.addEventListener('change', updateReveal);
+  if (prefersReducedMotion.addEventListener) {
+    prefersReducedMotion.addEventListener('change', updateReveal);
+  } else if (prefersReducedMotion.addListener) {
+    prefersReducedMotion.addListener(updateReveal);
+  }
 </script>
 </body>
 </html>

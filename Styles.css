@@ -66,6 +66,9 @@ overflow: hidden;
 .femstem-landing h3 {
 font-weight: 600;
 letter-spacing: -0.02em;
+margin: 0 0 0.75rem;
+}
+
 /* Hero layout: ensure logo and title never overlap and remain in normal flow */
 .hero-header {
   display: flex;
@@ -116,8 +119,6 @@ letter-spacing: -0.02em;
     width: 50%;
     max-width: 320px;
   }
-}
-margin: 0 0 0.75rem;
 }
 
 .femstem-landing h1 {
@@ -262,20 +263,6 @@ margin: 0 12px 12px;
 padding: 0 56px;
 }
 
-@media (max-width: 480px) {
-  .femstem-landing .femstem-section {
-    margin: 0 8px 8px;
-  }
-
-  .femstem-landing .femstem-dark {
-    border-radius: 20px;
-  }
-
-  .femstem-landing .femstem-light {
-    border-radius: 20px;
-  }
-}
-
 .femstem-landing h1 {
 font-size: 3rem;
 }
@@ -293,6 +280,20 @@ gap: 2rem;
 padding: 32px;
 flex: 1;
 }
+}
+
+@media (max-width: 480px) {
+  .femstem-landing .femstem-section {
+    margin: 0 8px 8px;
+  }
+
+  .femstem-landing .femstem-dark {
+    border-radius: 20px;
+  }
+
+  .femstem-landing .femstem-light {
+    border-radius: 20px;
+  }
 }
 .femstem-landing .femstem-logo {
   margin-bottom: 0.5cm;
@@ -313,6 +314,11 @@ flex: 1;
 /* ===== SCROLL ANIMATIONS (Progressive Reveal, Apple-like) ===== */
 /* Sections start hidden; JS maps scroll progress to opacity/translateY */
 .femstem-landing .femstem-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.js-reveal .femstem-landing .femstem-section {
   opacity: 0;
   transform: translateY(40px);
   will-change: opacity, transform;
@@ -320,7 +326,7 @@ flex: 1;
 
 /* Reduce motion for users who prefer it - instant appearance */
 @media (prefers-reduced-motion: reduce) {
-  .femstem-landing .femstem-section {
+  .js-reveal .femstem-landing .femstem-section {
     opacity: 1;
     transform: translateY(0);
   }
@@ -328,7 +334,7 @@ flex: 1;
 
 /* Responsive animation adjustments */
 @media (max-width: 768px) {
-  .femstem-landing .femstem-section {
+  .js-reveal .femstem-landing .femstem-section {
     transform: translateY(32px);
   }
 }
