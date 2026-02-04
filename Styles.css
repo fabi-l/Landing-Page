@@ -138,6 +138,12 @@ font-size: 2.145rem;
     max-width: 100%;
     font-size: clamp(1.17rem, 4.095vw, 1.56rem);
   }
+
+  .femstem-landing #hero .femstem-container {
+    text-align: center;
+    align-items: center;
+    padding-left: 24px;
+  }
 }
 
 .femstem-landing h2 {
