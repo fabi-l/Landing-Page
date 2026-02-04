@@ -122,6 +122,14 @@ margin: 0 0 0.75rem;
 font-size: 2.2rem;
 }
 
+.femstem-landing #hero h1 {
+  width: 75%;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+}
+
 .femstem-landing h2 {
 font-size: 1.6rem;
 }
