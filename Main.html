@@ -87,7 +87,7 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('scroll-in-view');
+        entry.target.classList.add('is-visible');
         // Optional: stop observing after animation to reduce performance impact
         observer.unobserve(entry.target);
       }

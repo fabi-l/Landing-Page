@@ -310,43 +310,24 @@ flex: 1;
   max-width: 280px;
 }
 
-/* ===== SCROLL ANIMATIONS (Apple-style Pop-In) ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Section content builds up on scroll (Apple-like bottom-up, staggered) */
-.femstem-landing .femstem-section .femstem-container > * {
+/* ===== SCROLL ANIMATIONS (Slow Reveal, Apple-like) ===== */
+/* Sections start hidden and glide up gently on scroll */
+.femstem-landing .femstem-section {
   opacity: 0;
-  transform: translateY(36px);
-  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(40px);
+  transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1), transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
-/* Visible state: section is in viewport - items reveal */
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > * {
+/* Visible state: section is in viewport */
+.femstem-landing .femstem-section.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Staggered build-up (subtle, no playful delays) */
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(1) { transition-delay: 0ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(2) { transition-delay: 90ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(3) { transition-delay: 180ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(4) { transition-delay: 270ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(5) { transition-delay: 360ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(6) { transition-delay: 450ms; }
-
 /* Reduce motion for users who prefer it - instant appearance */
 @media (prefers-reduced-motion: reduce) {
-  .femstem-landing .femstem-section .femstem-container > * {
+  .femstem-landing .femstem-section {
     opacity: 1;
     transform: translateY(0);
     transition: none;
@@ -354,7 +335,7 @@ flex: 1;
 }
 
 /* Hero section (always visible, no animation delay) */
-.femstem-landing #hero .femstem-container > * {
+.femstem-landing #hero {
   opacity: 1;
   transform: translateY(0);
   transition: none;
@@ -362,9 +343,9 @@ flex: 1;
 
 /* Responsive animation adjustments */
 @media (max-width: 768px) {
-  .femstem-landing .femstem-section .femstem-container > * {
-    transform: translateY(28px);
-    transition: opacity 560ms cubic-bezier(0.16, 1, 0.3, 1), transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
+  .femstem-landing .femstem-section {
+    transform: translateY(32px);
+    transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
 
