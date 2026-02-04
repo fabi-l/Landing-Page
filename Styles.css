@@ -310,19 +310,12 @@ flex: 1;
   max-width: 280px;
 }
 
-/* ===== SCROLL ANIMATIONS (Slow Reveal, Apple-like) ===== */
-/* Sections start hidden and glide up gently on scroll */
+/* ===== SCROLL ANIMATIONS (Progressive Reveal, Apple-like) ===== */
+/* Sections start hidden; JS maps scroll progress to opacity/translateY */
 .femstem-landing .femstem-section {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1), transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
-}
-
-/* Visible state: section is in viewport */
-.femstem-landing .femstem-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Reduce motion for users who prefer it - instant appearance */
@@ -330,22 +323,13 @@ flex: 1;
   .femstem-landing .femstem-section {
     opacity: 1;
     transform: translateY(0);
-    transition: none;
   }
-}
-
-/* Hero section (always visible, no animation delay) */
-.femstem-landing #hero {
-  opacity: 1;
-  transform: translateY(0);
-  transition: none;
 }
 
 /* Responsive animation adjustments */
 @media (max-width: 768px) {
   .femstem-landing .femstem-section {
     transform: translateY(32px);
-    transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
 
