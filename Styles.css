@@ -16,6 +16,11 @@ box-sizing: border-box;
 
 .femstem-landing .femstem-section {
 padding: 64px 0;
+/* Each section fills entire viewport (Apple-style fullscreen) */
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
 /* Each section snaps to top of viewport (Apple-style stacking) */
 scroll-snap-align: start;
 scroll-snap-stop: always;
