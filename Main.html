@@ -77,5 +77,27 @@
         </div>
     </section>
 </div> <!-- HTML END -->
+<script>
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1, // Trigger when 10% of section is visible
+    rootMargin: '0px 0px -50px 0px' // Offset: trigger 50px before bottom of viewport
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('scroll-in-view');
+        // Optional: stop observing after animation to reduce performance impact
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections except hero (which is always visible)
+  document.querySelectorAll('.femstem-landing .femstem-section:not(#hero)').forEach(section => {
+    observer.observe(section);
+  });
+</script>
 </body>
 </html>
