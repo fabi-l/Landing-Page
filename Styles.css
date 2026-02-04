@@ -50,8 +50,6 @@ text-align: center;
 .femstem-landing .femstem-dark {
 background: #7a001f;
 color: #ffffff;
-border-radius: 28px;
-overflow: hidden;
 }
 
 .femstem-landing .femstem-light {
@@ -268,7 +266,7 @@ padding: 0 56px;
   }
 
   .femstem-landing .femstem-dark {
-    border-radius: 20px;
+    border-radius: 0;
   }
 
   .femstem-landing .femstem-light {
