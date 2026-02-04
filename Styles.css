@@ -27,7 +27,7 @@ color: #ffffff;
 
 .femstem-landing .femstem-light {
 background: #ffffff;
-  margin-bottom: 0;
+color: #000000;
 }
 
 .femstem-landing h1,
@@ -196,7 +196,7 @@ flex: 1;
 }
 }
 .femstem-landing .femstem-logo {
-  margin-bottom: -100px;
+  margin-bottom: 0.5cm;
 }
 
 .femstem-landing .femstem-logo img {
