@@ -295,23 +295,23 @@ flex: 1;
   }
 }
 
-/* Sections start hidden and will fade in on scroll (Pop-In effect) */
-.femstem-landing .femstem-section {
+/* Sections content starts hidden and will fade in on scroll (soft reveal) */
+.femstem-landing .femstem-section .femstem-container {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 900ms ease-out, transform 900ms ease-out;
   will-change: opacity, transform;
 }
 
-/* Visible state: section is in viewport - Pop-In animation plays */
-.femstem-landing .femstem-section.scroll-in-view {
+/* Visible state: section is in viewport - soft reveal plays */
+.femstem-landing .femstem-section.scroll-in-view .femstem-container {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Reduce motion for users who prefer it - instant appearance */
 @media (prefers-reduced-motion: reduce) {
-  .femstem-landing .femstem-section {
+  .femstem-landing .femstem-section .femstem-container {
     opacity: 1;
     transform: translateY(0);
     transition: none;
@@ -319,7 +319,7 @@ flex: 1;
 }
 
 /* Hero section (always visible, no animation delay) */
-.femstem-landing #hero {
+.femstem-landing #hero .femstem-container {
   opacity: 1;
   transform: translateY(0);
   transition: none;
@@ -327,7 +327,7 @@ flex: 1;
 
 /* Responsive animation adjustments */
 @media (max-width: 768px) {
-  .femstem-landing .femstem-section {
+  .femstem-landing .femstem-section .femstem-container {
     transition: opacity 800ms ease-out, transform 800ms ease-out;
   }
 }
