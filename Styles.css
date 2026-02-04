@@ -57,6 +57,8 @@ overflow: hidden;
 .femstem-landing .femstem-light {
 background: #ffffff;
 color: #000000;
+border-radius: 28px;
+overflow: hidden;
 }
 
 .femstem-landing h1,
@@ -266,6 +268,10 @@ padding: 0 56px;
   }
 
   .femstem-landing .femstem-dark {
+    border-radius: 20px;
+  }
+
+  .femstem-landing .femstem-light {
     border-radius: 20px;
   }
 }
