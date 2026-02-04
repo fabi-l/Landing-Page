@@ -199,6 +199,11 @@ flex: 1;
   margin-bottom: 0.5cm;
 }
 
+/* Ensure h1 doesn't overlap the logo */
+.femstem-landing h1 {
+  margin-top: 0.2cm;
+}
+
 .femstem-landing .femstem-logo img {
   display: block;
   height: auto;
