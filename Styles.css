@@ -4,6 +4,8 @@ font-family: "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont, sans-se
 font-weight: 400;
 line-height: 1.6;
 overflow-x: hidden;
+background: #f3f3f3;
+padding: 24px 0;
 /* Enable smooth scroll-snap for section stacking (Apple-like) */
 scroll-snap-type: y mandatory;
 scroll-padding-top: 0;
@@ -22,10 +24,15 @@ display: flex;
 align-items: center;
 justify-content: center;
 border-radius: 28px;
+margin: 0 16px 24px;
 overflow: hidden;
 /* Each section snaps to top of viewport (Apple-style stacking) */
 scroll-snap-align: start;
 scroll-snap-stop: always;
+}
+
+.femstem-landing .femstem-section:last-child {
+  margin-bottom: 0;
 }
 
 .femstem-landing .femstem-container {
@@ -219,6 +226,7 @@ max-width: none;
 @media (min-width: 768px) {
 .femstem-landing .femstem-section {
 padding: 80px 0;
+margin: 0 24px 32px;
 }
 
 .femstem-landing h1 {
@@ -245,10 +253,18 @@ font-size: 1.2rem;
 @media (min-width: 1024px) {
 .femstem-landing .femstem-section {
 padding: 96px 0;
+margin: 0 32px 40px;
 }
 
 .femstem-landing .femstem-container {
 padding: 0 56px;
+}
+
+@media (max-width: 480px) {
+  .femstem-landing .femstem-section {
+    border-radius: 20px;
+    margin: 0 12px 20px;
+  }
 }
 
 .femstem-landing h1 {
