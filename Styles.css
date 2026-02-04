@@ -196,9 +196,8 @@ flex: 1;
 }
 }
 .femstem-landing .femstem-logo {
-  margin-bottom: 4px;
+  margin-bottom: -10px;
 }
-
 
 .femstem-landing .femstem-logo img {
   display: block;
