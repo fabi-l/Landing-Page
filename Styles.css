@@ -78,15 +78,16 @@ margin: 0 0 0.75rem;
 .hero-logo {
   /* fixed baseline gap between logo and title; no negative margins */
   margin-bottom: 0.5cm;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   display: flex;
   justify-content: center;
 }
 
 .hero-logo .logo-image {
   display: block;
-  width: 60%;
-  max-width: 280px;
+  width: 100%;
+  max-width: none;
   height: auto;
 }
 
@@ -108,15 +109,15 @@ margin: 0 0 0.75rem;
     margin-bottom: 1.0cm;
   }
   .hero-logo .logo-image {
-    width: 80%;
-    max-width: 220px;
+    width: 100%;
+    max-width: none;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-logo .logo-image {
-    width: 50%;
-    max-width: 320px;
+    width: 100%;
+    max-width: none;
   }
 }
 
