@@ -84,7 +84,7 @@ margin: 0 0 0.75rem;
 
 .hero-logo .logo-image {
   display: block;
-  width: 100%;
+  width: 150%;
   max-width: none;
   height: auto;
 }
@@ -107,20 +107,20 @@ margin: 0 0 0.75rem;
     margin-bottom: 1.0cm;
   }
   .hero-logo .logo-image {
-    width: 100%;
+    width: 150%;
     max-width: none;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-logo .logo-image {
-    width: 100%;
+    width: 150%;
     max-width: none;
   }
 }
 
 .femstem-landing h1 {
-font-size: 1.65rem;
+font-size: 2.145rem;
 }
 
 .femstem-landing #hero h1 {
@@ -128,7 +128,7 @@ font-size: 1.65rem;
   max-width: 75%;
   margin-left: auto;
   margin-right: auto;
-  font-size: clamp(1.05rem, 1.425vw, 1.65rem);
+  font-size: clamp(1.365rem, 1.853vw, 2.145rem);
   text-align: center;
 }
 
@@ -136,7 +136,7 @@ font-size: 1.65rem;
   .femstem-landing #hero h1 {
     width: 100%;
     max-width: 100%;
-    font-size: clamp(0.9rem, 3.15vw, 1.2rem);
+    font-size: clamp(1.17rem, 4.095vw, 1.56rem);
   }
 }
 
@@ -261,7 +261,7 @@ margin: 0 12px 12px;
 }
 
 .femstem-landing h1 {
-font-size: 1.95rem;
+font-size: 2.535rem;
 }
 
 .femstem-landing h2 {
@@ -283,7 +283,7 @@ font-size: 1.2rem;
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero-logo .logo-image {
-    width: 100%;
+    width: 150%;
     max-width: none;
   }
 }
@@ -299,7 +299,7 @@ padding: 0 56px;
 }
 
 .femstem-landing h1 {
-font-size: 2.25rem;
+font-size: 2.925rem;
 }
 
 .femstem-landing h2 {
