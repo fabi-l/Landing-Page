@@ -4,6 +4,10 @@ font-family: "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont, sans-se
 font-weight: 400;
 line-height: 1.6;
 overflow-x: hidden;
+/* Enable smooth scroll-snap for section stacking (Apple-like) */
+scroll-snap-type: y mandatory;
+scroll-padding-top: 0;
+scroll-behavior: smooth;
 }
 
 .femstem-landing * {
@@ -12,6 +16,9 @@ box-sizing: border-box;
 
 .femstem-landing .femstem-section {
 padding: 64px 0;
+/* Each section snaps to top of viewport (Apple-style stacking) */
+scroll-snap-align: start;
+scroll-snap-stop: always;
 }
 
 .femstem-landing .femstem-container {
