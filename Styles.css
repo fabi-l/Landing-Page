@@ -325,8 +325,8 @@ flex: 1;
 /* Section content builds up on scroll (Apple-like bottom-up, staggered) */
 .femstem-landing .femstem-section .femstem-container > * {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 520ms cubic-bezier(0.16, 1, 0.3, 1), transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(36px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -338,11 +338,11 @@ flex: 1;
 
 /* Staggered build-up (subtle, no playful delays) */
 .femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(1) { transition-delay: 0ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(2) { transition-delay: 70ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(3) { transition-delay: 140ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(4) { transition-delay: 210ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(5) { transition-delay: 280ms; }
-.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(6) { transition-delay: 350ms; }
+.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(2) { transition-delay: 90ms; }
+.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(3) { transition-delay: 180ms; }
+.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(4) { transition-delay: 270ms; }
+.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(5) { transition-delay: 360ms; }
+.femstem-landing .femstem-section.scroll-in-view .femstem-container > :nth-child(6) { transition-delay: 450ms; }
 
 /* Reduce motion for users who prefer it - instant appearance */
 @media (prefers-reduced-motion: reduce) {
@@ -363,8 +363,8 @@ flex: 1;
 /* Responsive animation adjustments */
 @media (max-width: 768px) {
   .femstem-landing .femstem-section .femstem-container > * {
-    transform: translateY(20px);
-    transition: opacity 480ms cubic-bezier(0.16, 1, 0.3, 1), transform 480ms cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(28px);
+    transition: opacity 560ms cubic-bezier(0.16, 1, 0.3, 1), transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
 
