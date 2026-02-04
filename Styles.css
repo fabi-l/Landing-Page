@@ -196,13 +196,13 @@ flex: 1;
 }
 }
 .femstem-landing .femstem-logo {
-  margin-bottom: 0.5cm;
+  margin-bottom: 24px;
 }
 
 .femstem-landing .femstem-logo img {
   display: block;
-  width: 100%;
   height: auto;
-  max-width: none;
+  width: 60%;
+  max-width: 280px;
 }
 /* CSS END */
