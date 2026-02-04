@@ -23,9 +23,7 @@ min-height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-border-radius: 28px;
 margin: 0 16px 24px;
-overflow: hidden;
 /* Each section snaps to top of viewport (Apple-style stacking) */
 scroll-snap-align: start;
 scroll-snap-stop: always;
@@ -52,6 +50,8 @@ text-align: center;
 .femstem-landing .femstem-dark {
 background: #7a001f;
 color: #ffffff;
+border-radius: 28px;
+overflow: hidden;
 }
 
 .femstem-landing .femstem-light {
@@ -262,8 +262,11 @@ padding: 0 56px;
 
 @media (max-width: 480px) {
   .femstem-landing .femstem-section {
-    border-radius: 20px;
     margin: 0 12px 20px;
+  }
+
+  .femstem-landing .femstem-dark {
+    border-radius: 20px;
   }
 }
 
