@@ -6,8 +6,8 @@ line-height: 1.6;
 overflow-x: hidden;
 background: #faf8f5;
 padding: 12px 0;
-/* Enable smooth scroll-snap for section stacking (Apple-like) */
-scroll-snap-type: y mandatory;
+/* Enable gentle scroll-snap for section stacking (Apple-like) */
+scroll-snap-type: y proximity;
 scroll-padding-top: 0;
 scroll-behavior: smooth;
 }
@@ -26,7 +26,6 @@ justify-content: center;
 margin: 0 12px 12px;
 /* Each section snaps to top of viewport (Apple-style stacking) */
 scroll-snap-align: start;
-scroll-snap-stop: always;
 }
 
 .femstem-landing .femstem-section:last-child {
