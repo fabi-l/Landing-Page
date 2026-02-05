@@ -275,12 +275,20 @@ font-weight: 600;
 
 .femstem-landing .facts-list strong {
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0;
 }
 
 .femstem-landing .facts-list {
   list-style: none;
   padding-left: 0;
+}
+
+.femstem-landing .facts-list li {
+  margin-bottom: 1rem;
+}
+
+.femstem-landing .facts-list li:last-child {
+  margin-bottom: 0;
 }
 
 .femstem-landing .section-3-image {
