@@ -314,6 +314,11 @@ transform: translateY(-1px);
 box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
+.femstem-landing a[href="#partner"],
+.femstem-landing a[href="#spenderinnen"] {
+  color: #000000;
+}
+
 .femstem-landing a:focus-visible,
 .femstem-landing button:focus-visible {
 outline: 3px solid #f4c95d;
