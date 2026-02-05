@@ -76,6 +76,30 @@ border-radius: 28px;
 overflow: hidden;
 }
 
+/* Final section background image */
+.femstem-landing .final-section {
+  position: relative;
+  background-color: transparent;
+  background-image: url("./MenSC.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.femstem-landing .final-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.femstem-landing .final-section .femstem-container {
+  position: relative;
+  z-index: 1;
+}
+
 .femstem-landing .femstem-light {
 background: #ffffff;
 color: #000000;
@@ -300,6 +324,14 @@ border: 1px solid currentColor;
 background: transparent;
 }
 
+/* Match final section heading style to CTA card headings */
+.femstem-landing #cta .cta-heading,
+.femstem-landing #cta .femstem-cta-card h3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
 .femstem-landing .femstem-dark .femstem-cta-card {
 background: rgba(255, 255, 255, 0.06);
 border-color: rgba(255, 255, 255, 0.3);
@@ -313,6 +345,11 @@ max-width: none;
 .femstem-landing .femstem-section {
 padding: 80px 0;
 margin: 0 12px 12px;
+}
+
+.femstem-landing #cta .cta-heading,
+.femstem-landing #cta .femstem-cta-card h3 {
+  font-size: 2.025rem;
 }
 
 .femstem-landing h1 {
@@ -370,6 +407,13 @@ gap: 2rem;
 padding: 32px;
 flex: 1;
 }
+}
+
+@media (min-width: 1024px) {
+  .femstem-landing #cta .cta-heading,
+  .femstem-landing #cta .femstem-cta-card h3 {
+    font-size: 2.025rem;
+  }
 }
 
 @media (max-width: 480px) {
