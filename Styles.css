@@ -48,7 +48,7 @@ text-align: left;
 /* Section 2 split layout: text + image */
 .femstem-landing .femstem-split {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 2fr 1fr;
   gap: 2rem;
   align-items: stretch;
 }
@@ -62,7 +62,7 @@ text-align: left;
 }
 
 .femstem-landing .femstem-image img {
-  width: auto;
+  width: 100%;
   max-width: 100%;
   height: 100%;
   object-fit: contain;
