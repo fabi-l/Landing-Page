@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- HTML START -->
+ <!DOCTYPE html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,17 +16,24 @@
                     <img src="FemStemLogo.svg" alt="FemStem Logo" class="logo-image">
                 </div>
                 <div class="hero-title">
-                    <h1>Das Potenzial ungenutzter Stammzellen nutzbar machen.</h1>
-                    <p class="femstem-lead">Ein nicht-invasiver, ethischer Zugang zu Stammzellen für die Forschung.</p>
+                    <h1>Koordinierte Bereitstellung von Menstruationsblut als Stammzellenquelle für die Forschung.</h1>
+                    <p class="femstem-lead">Ein neuer Weg Zugang zu Stammzellen zu bekommen</p>
                 </div>
             </div>
         </div>
     </section>
     <section id="was-ist" class="femstem-section femstem-light">
         <div class="femstem-container">
-            <h2>Was ist FemStem?</h2>
-            <p>FemStem ist eine koordinierende Struktur zur Bereitstellung von Menstrual Stem Cells für die wissenschaftliche Forschung. Über standardisierte und klar definierte Prozesse verbindet FemStem Spenderinnen, Logistik und Forschung.</p>
-            <p>Der gesamte Ablauf von der sachlichen Information und Ansprache der Spenderinnen über Registrierung und Prozessbegleitung bis zur Übergabe an Forschungseinrichtungen wird zentral gesteuert. Dadurch erhalten Forschungseinrichtungen einen verlässlichen und vergleichbaren Zugang zu standardisiertem biologischem Ausgangsmaterial.</p>
+            <div class="femstem-split">
+                <div class="femstem-text">
+                    <h2>Was ist FemStem?</h2>
+                    <p>FemStem ist eine koordinierende Struktur zur Bereitstellung von Menstrual Stem Cells für die wissenschaftliche Forschung. Über standardisierte und klar definierte Prozesse verbindet FemStem Spenderinnen, Logistik und Forschung.</p>
+                    <p>Der gesamte Ablauf von der sachlichen Information und Ansprache der Spenderinnen über Registrierung und Prozessbegleitung bis zur Übergabe an Forschungseinrichtungen wird zentral gesteuert. Dadurch erhalten Forschungseinrichtungen einen verlässlichen und vergleichbaren Zugang zu standardisiertem biologischem Ausgangsmaterial.</p>
+                </div>
+                <figure class="femstem-image">
+                    <img src="WasIstFemStem.png" alt="FemStem Überblick">
+                </figure>
+            </div>
         </div>
     </section>
     <section id="wieso" class="femstem-section femstem-dark">
@@ -75,28 +83,6 @@
             </div>
         </div>
     </section>
-</div>
-<script>
-  // Intersection Observer for scroll animations
-  const observerOptions = {
-    threshold: 0.1, // Trigger when 10% of section is visible
-    rootMargin: '0px 0px -50px 0px' // Offset: trigger 50px before bottom of viewport
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('scroll-in-view');
-        // Optional: stop observing after animation to reduce performance impact
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Observe all sections except hero (which is always visible)
-  document.querySelectorAll('.femstem-landing .femstem-section:not(#hero)').forEach(section => {
-    observer.observe(section);
-  });
-</script>
+</div> <!-- HTML END -->
 </body>
 </html>
