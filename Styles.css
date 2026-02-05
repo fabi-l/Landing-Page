@@ -70,7 +70,7 @@ text-align: left;
 }
 
 .femstem-landing .femstem-dark {
-background: #7a001f;
+background: rgba(122, 0, 31, 0.8);
 color: #ffffff;
 border-radius: 28px;
 overflow: hidden;
@@ -111,7 +111,7 @@ overflow: hidden;
 }
 
 .femstem-landing .femstem-light {
-background: #ffffff;
+background: rgba(255, 255, 255, 0.8);
 color: #000000;
 border-radius: 28px;
 overflow: hidden;
