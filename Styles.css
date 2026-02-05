@@ -45,6 +45,28 @@ justify-content: center;
 text-align: left;
 }
 
+/* Section 2 split layout: text + image */
+.femstem-landing .femstem-split {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.femstem-landing .femstem-image {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.femstem-landing .femstem-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .femstem-landing .femstem-dark {
 background: #7a001f;
 color: #ffffff;
@@ -144,6 +166,11 @@ font-size: 2.145rem;
     align-items: center;
     padding-left: 24px;
     padding-right: 24px;
+  }
+
+  .femstem-landing .femstem-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
