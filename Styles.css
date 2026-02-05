@@ -273,6 +273,11 @@ margin-bottom: 0;
 font-weight: 600;
 }
 
+.femstem-landing .facts-list strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
 .femstem-landing .section-3-image {
   display: block;
   width: 100%;
