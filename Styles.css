@@ -355,45 +355,74 @@ flex: 1;
   max-width: 280px;
 }
 
-/* ===== SCROLL ANIMATIONS (Progressive Reveal, Apple-like) ===== */
-/* Sections start hidden; JS maps scroll progress to opacity/translateY */
+/* ===== SCROLL ANIMATIONS (CSS-only Reveal, Apple-like) ===== */
 .femstem-landing .femstem-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 800ms ease-out, transform 800ms ease-out;
+  will-change: opacity, transform;
+}
+
+/* Visible state via class (if applied) */
+.femstem-landing .femstem-section.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.js-reveal .femstem-landing .femstem-section {
-  opacity: 0;
-  transform: translateY(36px);
-  transition: opacity 1250ms cubic-bezier(0.16, 1, 0.3, 1), transform 1250ms cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.js-reveal .femstem-landing #hero {
+/* Keep hero visible */
+.femstem-landing #hero {
   opacity: 1;
   transform: translateY(0);
   transition: none;
 }
 
-.js-reveal .femstem-landing .femstem-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes femstem-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CSS-only scroll reveal using view timelines when supported */
+@supports (animation-timeline: view()) {
+  .femstem-landing .femstem-section {
+    animation: femstem-reveal 800ms ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+
+  .femstem-landing #hero {
+    animation: none;
+  }
+}
+
+/* Fallback: no scroll-linked animation support */
+@supports not (animation-timeline: view()) {
+  .femstem-landing .femstem-section {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Reduce motion for users who prefer it - instant appearance */
 @media (prefers-reduced-motion: reduce) {
-  .js-reveal .femstem-landing .femstem-section {
+  .femstem-landing .femstem-section {
     opacity: 1;
     transform: translateY(0);
     transition: none;
+    animation: none;
   }
 }
 
 /* Responsive animation adjustments */
 @media (max-width: 768px) {
-  .js-reveal .femstem-landing .femstem-section {
+  .femstem-landing .femstem-section {
     transform: translateY(28px);
-    transition: opacity 1000ms cubic-bezier(0.16, 1, 0.3, 1), transform 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 700ms ease-out, transform 700ms ease-out;
   }
 }
 
