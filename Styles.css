@@ -239,6 +239,14 @@ margin-bottom: 0;
 font-weight: 600;
 }
 
+.femstem-landing .section-3-image {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 1.5rem auto 0;
+}
+
 .femstem-landing a {
 color: inherit;
 }
