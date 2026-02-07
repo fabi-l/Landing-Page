@@ -294,6 +294,15 @@ margin-bottom: 0;
 font-weight: 600;
 }
 
+/* Spenderin Ablauf: larger list markers, smaller explanations */
+.page-spenderin #ablauf .femstem-steps li::marker {
+  font-size: 125%;
+}
+
+.page-spenderin #ablauf .femstem-steps li p {
+  font-size: 50%;
+}
+
 .femstem-landing .facts-list {
   display: flex;
   flex-direction: column;
