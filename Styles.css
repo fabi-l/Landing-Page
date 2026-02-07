@@ -296,7 +296,7 @@ font-weight: 600;
 
 /* Spenderin Ablauf: larger list markers, smaller explanations */
 .page-spenderin #ablauf .femstem-steps {
-  font-size: 150%;
+  font-size: 100%;
 }
 
 .page-spenderin #ablauf .femstem-steps li p {
