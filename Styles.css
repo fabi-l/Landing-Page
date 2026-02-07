@@ -255,6 +255,27 @@ text-align: center;
 margin-top: 0.6rem;
 }
 
+/* Spenderin hero: match spacing and size between H1 and lead */
+.page-spenderin .hero-title h1 {
+  margin-bottom: 0.4rem;
+}
+
+.page-spenderin .hero-title .femstem-lead {
+  margin-top: 0;
+  font-size: clamp(1.365rem, 1.853vw, 2.145rem);
+}
+
+.page-spenderin #hero h1 {
+  font-size: clamp(1.365rem, 1.853vw, 2.145rem);
+}
+
+@media (max-width: 768px) {
+  .page-spenderin #hero h1,
+  .page-spenderin .hero-title .femstem-lead {
+    font-size: clamp(1.17rem, 4.095vw, 1.56rem);
+  }
+}
+
 .femstem-landing .femstem-steps {
 margin: 16px 0 0;
 padding-left: 0;
