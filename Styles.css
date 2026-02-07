@@ -349,9 +349,9 @@ box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
 .femstem-landing a[href="#partner"],
-.femstem-landing a[href="#spenderinnen"],
+.femstem-landing a[href="spenderin.html"],
 .femstem-landing .femstem-btn[href="#partner"],
-.femstem-landing .femstem-btn[href="#spenderinnen"] {
+.femstem-landing .femstem-btn[href="spenderin.html"] {
   color: #000000;
 }
 
