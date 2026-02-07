@@ -295,12 +295,12 @@ font-weight: 600;
 }
 
 /* Spenderin Ablauf: larger list markers, smaller explanations */
-.page-spenderin #ablauf .femstem-steps li {
-  font-size: 125%;
+.page-spenderin #ablauf .femstem-steps {
+  font-size: 150%;
 }
 
 .page-spenderin #ablauf .femstem-steps li p {
-  font-size: 75%;
+  font-size: 100%;
 }
 
 .femstem-landing .facts-list {
