@@ -527,71 +527,74 @@ flex: 1;
   max-width: 280px;
 }
 
-/* ===== SCROLL ANIMATIONS (CSS-only, pale <-> present) ===== */
+/* ===== SCROLL ANIMATIONS (CSS-only Reveal, Apple-like) ===== */
 .femstem-landing .femstem-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 800ms ease-out, transform 800ms ease-out;
+  will-change: opacity, transform;
+}
+
+/* Visible state via class (if applied) */
+.femstem-landing .femstem-section.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-@keyframes femstem-presence {
-  0% {
-    opacity: 0.22;
-    transform: translateY(28px);
+/* Keep hero visible */
+.femstem-landing #hero {
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}
+
+@keyframes femstem-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
   }
-  50% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
-  100% {
-    opacity: 0.22;
-    transform: translateY(-14px);
-  }
 }
 
-/* Scroll-linked effect in modern browsers: fades in while entering, fades out while leaving */
+/* CSS-only scroll reveal using view timelines when supported */
 @supports (animation-timeline: view()) {
   .femstem-landing .femstem-section {
-    animation-name: femstem-presence;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
+    animation: femstem-reveal 800ms ease-out both;
     animation-timeline: view();
-    animation-range: entry 0% exit 100%;
-    will-change: opacity, transform;
+    animation-range: entry 0% entry 40%;
   }
 
   .femstem-landing #hero {
     animation: none;
+  }
+}
+
+/* Fallback: no scroll-linked animation support */
+@supports not (animation-timeline: view()) {
+  .femstem-landing .femstem-section {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Reduce motion for users who prefer it */
+/* Reduce motion for users who prefer it - instant appearance */
 @media (prefers-reduced-motion: reduce) {
   .femstem-landing .femstem-section {
-    animation: none !important;
     opacity: 1;
     transform: translateY(0);
+    transition: none;
+    animation: none;
   }
 }
 
 /* Responsive animation adjustments */
 @media (max-width: 768px) {
-  @keyframes femstem-presence {
-    0% {
-      opacity: 0.25;
-      transform: translateY(22px);
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    100% {
-      opacity: 0.25;
-      transform: translateY(-10px);
-    }
+  .femstem-landing .femstem-section {
+    transform: translateY(28px);
+    transition: opacity 700ms ease-out, transform 700ms ease-out;
   }
 }
 
